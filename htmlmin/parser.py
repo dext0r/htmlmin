@@ -143,7 +143,7 @@ class HTMLMinParser(HTMLParser):
           (v, q) = escape.escape_attr_value(
             v, double_quote=not self.remove_optional_attribute_quotes)
           if self.strip_attr_values:
-            v = ''.join([x.strip() for x in v.split('\n')])
+            v = ' '.join([x.strip() for x in v.split('\n')])
           if q == escape.NO_QUOTES:
             result.write(v)
           elif q == escape.DOUBLE_QUOTE:
